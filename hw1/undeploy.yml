@@ -1,0 +1,16 @@
+---
+- name: Create a Flask webserver
+  remote_user: root 
+  become: yes
+  become_method: sudo
+  hosts: local 
+  gather_facts: False
+  
+  tasks:
+    - name: Remove virtual environment
+      file:
+        path: /home/ec2-user/hw1/env
+        state: absent
+
+    - name: Uninstall virtualenv 
+      yum: name=python-virtualenv state=absent
