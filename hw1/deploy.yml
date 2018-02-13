@@ -1,5 +1,5 @@
 ---
-- name: Create a Flask webserver
+- name: Deploy Flask webserver
   remote_user: root 
   become: yes
   become_method: sudo
@@ -11,10 +11,10 @@
       yum: name=python-virtualenv state=present
 
     - name: Create and activate virtual environment
-      file: path=/home/ec2-user/hw1/env state=directory
+      file: path=/home/ec2-user/Enterprise-Software/hw1/env state=directory
 
     - name: Install Flask
       shell: "pip install flask"
 
     - name: Deploy Flask on port 80
-      shell: "python /home/ec2-user/hw1/app.py"
+      shell: "python /home/ec2-user/Enterprise-Software/hw1/app.py"
