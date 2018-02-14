@@ -10,8 +10,11 @@
     - name: Install virtualenv 
       yum: name=python-virtualenv state=present
 
-    - name: Create and activate virtual environment
-      file: path=/home/ec2-user/Enterprise-Software/hw1/env state=directory
+    - name: Create virtual environment
+      shell: "virtualenv /home/ec2-user/Enterprise-Software/hw1/env"
+
+    - name: Activate virtual environment
+      shell: "source /home/ec2-user/Enterprise-Software/hw1/env/bin/activate"
 
     - name: Install Flask
       shell: "pip install flask"
