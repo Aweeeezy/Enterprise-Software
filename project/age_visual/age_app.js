@@ -140,7 +140,3 @@ svg.append( 'g' )
         'border', '0px',
         'border-radius', '8px',
     );
-
-
-
-
