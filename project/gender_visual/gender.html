@@ -8,6 +8,13 @@
 <body>
     <h1>Employee Gender Distribution</h1>
     <hr>
+    <div id="switch-button">
+        <input name="switchButton"
+               type="button"
+               value="All"
+               onclick="updateChart(this)" />
+    </div>
+
     <div id="gender_chart"></div>
 
     <script src="https://d3js.org/d3.v5.js"></script>
