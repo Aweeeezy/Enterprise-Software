@@ -16,15 +16,16 @@ var width = fullWidth - margin.right - margin.left;
 var height = fullHeight - margin.top - margin.bottom;
 
 // Function used to switch between vertical and horizontal bar charts
+// NOTE: trying to get transition to work but can't figure this out
 function updateChart(button) {
-  if (button.value == 'All') {
-    svgVert.attr('display', 'none')
-    svgHoriz.attr('display', 'inline')
-    button.value = 'Dept'
-  } else if (button.value == 'Dept') {
-    svgHoriz.attr('display', 'none')
-    svgVert.attr('display', 'inline')
+  if (button.value == 'Dept') {
+    svgVert.transition().duration(5000).attr('display', 'none')
+    svgHoriz.transition().duration(5000).attr('display', 'inline')
     button.value = 'All'
+  } else if (button.value == 'All') {
+    svgHoriz.transition().duration(5000).attr('display', 'none')
+    svgVert.transition().duration(5000).attr('display', 'inline')
+    button.value = 'Dept'
   }
 }
 
@@ -49,6 +50,8 @@ var data = [
 
 // SVG element containing the vertical bar chart
 var svgVert = d3.select('#gender_chart').append('svg')
+  .attr('x', 0)
+  .attr('y', 0)
   .attr('width', fullWidth)
   .attr('height', fullHeight)
   .append('g')
@@ -199,6 +202,8 @@ agg_data[1].count = female_total;
 
 // SVG element containing the horizontal bar chart
 var svgHoriz = d3.select('#gender_chart').append('svg')
+  .attr('x', 0)
+  .attr('y', 0)
   .attr('width', fullWidth)
   .attr('height', fullHeight)
   .append('g')
