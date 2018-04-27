@@ -15,21 +15,7 @@ var data = [
     [63, 23336]
 ];
 
-var colors = [
-    '#0000ff',
-    '#0000e5',
-    '#0000cc',
-    '#0000b2',
-    '#000099',
-    '#00007f',
-    '#000066',
-    '#00004c',
-    '#00004c',
-    '#00004c',
-    '#000000'
-];
-
-var chart_height = 700;
+var chart_height = 600;
 var chart_width = 1000;
 var padding = 80;
 var y_shift = 110;
@@ -50,20 +36,17 @@ svg.append('clipPath')
 
 var x_scale = d3.scaleLinear()
     .domain([d3.min(data, function(d){
-        return d[0] -1;
+        return d[0] - 1;
     }), d3.max(data, function(d){
-        console.log(d[0] + 1);
         return d[0] + 1 ;
     })])
     .range([padding, chart_width - padding * 2]);
 
-// var x_scale = d3.scaleLinear()
-//     .domain([50, 70])
-//     .range([padding, chart_width - padding ]);
-
 var y_scale = d3.scaleLinear()
     //.domain([6000, 30000])
-    .domain([5000, d3.max(data, function(d){
+    .domain([d3.min(data, function(d){
+        return d[1];
+    }), d3.max(data, function(d){
         return d[1];
     })])
     .range([chart_height - padding, padding * 2]);
@@ -94,18 +77,11 @@ svg.append( 'g' )
 
 svg.append('text')
     .attr('transform', 'translate(30'  + ',' + chart_height /2 + ')' + 'rotate(-90)')
-    // .attr('y', chart_height / 2 )
-    // .attr('x', padding )
-    //.attr('dy', '1em')
     .style('text-anchor', 'middle')
     .text('No. of Employees')
     .style('font-family', 'sans-serif')
     .style('font-weight', 'bold')
     .style('font-size', '20px');
-
-
-
-
 
 // create circles
 svg.append( 'g' )
@@ -140,3 +116,43 @@ svg.append( 'g' )
         'border', '0px',
         'border-radius', '8px',
     );
+d3.selectAll('.tick text').on('click', function(d){
+    console.log(d);
+    for(var i = 0; i < data.length; i++){
+        console.log("each one: "+ data[i][1]);
+        if (data[i][1] < d){
+            console.log(data[i]);
+            data.splice(i, 1);
+        }
+    }
+    y_scale.domain([d, d3.max(data, function(d){
+        return d[1];
+    })]);
+
+    y_scale.range([chart_height - padding, padding ]);
+
+
+    svg.selectAll('circle')
+        .data(data)
+        .transition()
+        .duration(1000)
+        .attr("cx", function(d) {
+            return x_scale(d[0]);
+        })
+        .attr("cy", function(d) {
+            return y_scale( d[1] );
+        })
+        .attr('fill', '#0000b2');
+
+        // Update Axis
+        svg.select('.y-axis')
+            .transition()
+            .duration(1000)
+            .call(y_axis);
+        svg.select('.x-axis')
+            .transition()
+            .duration(1000)
+            .call(x_axis);
+
+
+});

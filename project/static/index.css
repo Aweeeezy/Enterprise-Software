@@ -1,0 +1,24 @@
+.navbar-default {
+  background-color: #0B77BD;
+
+}
+
+li a {
+  color: #FFFFFF;
+}
+
+#particles-js {
+  display: block;
+  background-color: #000000;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: repeat;
+  position: absolute;
+  height: auto;
+
+}
+
+.jumbotron container {
+  position: absolute;
+  
+}

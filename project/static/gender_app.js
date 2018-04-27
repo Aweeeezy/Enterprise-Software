@@ -11,7 +11,7 @@ color_map = {Male: '#24D5D8', Female: '#38B487'};
 // Setup SVG area for chart
 var margin = {top: 50, right: 5, bottom: 50, left: 100};
 var fullWidth = 1000;
-var fullHeight = 700;
+var fullHeight = 530;
 var width = fullWidth - margin.right - margin.left;
 var height = fullHeight - margin.top - margin.bottom;
 

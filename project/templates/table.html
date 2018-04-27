@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!--suppress ALL -->
+<!-- <!-suppress ALL -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Table</title>
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -18,7 +18,34 @@
     <script type="text/javascript" language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     -->
 </head>
-<body>
+ <body>
+   <nav class="navbar navbar-inverse ">
+     <div class="container">
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle = "collapse">
+           <span class="sr-only">Toggle Navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="/"> Glimpse </a>
+       </div>
+       <div id="navbar" class="collapse navbar-collapse">
+         <ul class="nav navbar-nav">
+           <li><a href = "/table">Data Table</a></li>
+           <li><a href = "/visualizations">Visualizations</a></li>
+           <li><a href = "/ageVisualizations">Age Visualizations</a></li>
+
+         </ul>
+         <ul class="nav navbar-nav navbar-right">
+           <li><a href = "/login">Login</a></li>
+
+         </ul>
+       </div>
+     </div>
+   </nav>
+
+
 <script>
     $(document).ready(function() {
         // $('#myTable1').DataTable();
@@ -30,8 +57,10 @@
         //});
 
         var myT1 = $('#myTable1.table').DataTable( {
-            ajax:           'ajax/data/Customer_Service.txt',
+            ajax:           '/static/table_data/Customer_Service.txt',
             "processing": false,
+
+
             "columns": [
                 { "data": "emp_no" },
                 { "data": "last_name" },
@@ -91,7 +120,7 @@
         } );
 
         var myT2 = $('#myTable2.table').DataTable( {
-            ajax:           'ajax/data/Development.txt',
+            ajax:           '/static/table_data/Development.txt',
             "processing": false,
             "columns": [
                 { "data": "emp_no" },
@@ -152,7 +181,7 @@
         } );
 
         var myT3 = $('#myTable3.table').DataTable( {
-            ajax:           'ajax/data/Finance.txt',
+            ajax:           '/static/table_data/Finance.txt',
             "processing": false,
             "columns": [
                 { "data": "emp_no" },
@@ -213,7 +242,7 @@
         } );
 
         var myT4 = $('#myTable4.table').DataTable( {
-            ajax:           'ajax/data/Human_Resources.txt',
+            ajax:           '/static/table_data/Human_Resources.txt',
             "processing": false,
             "columns": [
                 { "data": "emp_no" },
@@ -274,7 +303,7 @@
         } );
 
         var myT5 = $('#myTable5.table').DataTable( {
-            ajax:           'ajax/data/Marketing.txt',
+            ajax:           '/static/table_data/Marketing.txt',
             "processing": false,
             "columns": [
                 { "data": "emp_no" },
@@ -335,7 +364,7 @@
         } );
 
         var myT6 = $('#myTable6.table').DataTable( {
-            ajax:           'ajax/data/Production.txt',
+            ajax:           '/static/table_data/Production.txt',
             "processing": false,
             "columns": [
                 { "data": "emp_no" },
@@ -396,7 +425,7 @@
         } );
 
         var myT7 = $('#myTable7.table').DataTable( {
-            ajax:           'ajax/data/Quality_Management.txt',
+            ajax:           '/static/table_data/Quality_Management.txt',
             "processing": false,
             "columns": [
                 { "data": "emp_no" },
@@ -457,7 +486,7 @@
         } );
 
         var myT8 = $('#myTable8.table').DataTable( {
-            ajax:           'ajax/data/Research.txt',
+            ajax:           '/static/table_data/Research.txt',
             "processing": false,
             "columns": [
                 { "data": "emp_no" },
@@ -518,7 +547,7 @@
         } );
 
         var myT9 = $('#myTable9.table').DataTable( {
-            ajax:           'ajax/data/Sales.txt',
+            ajax:           '/static/table_data/Sales.txt',
             "processing": false,
             "columns": [
                 { "data": "emp_no" },
@@ -600,7 +629,7 @@
             <a href="#tab-table5" data-toggle="tab" aria-expanded="true">Marketing</a>
         </li>
         <li class="">
-            <a href="#tab-table6" data-toggle="tab" aria-expanded="true">Producting</a>
+            <a href="#tab-table6" data-toggle="tab" aria-expanded="true">Production</a>
         </li>
         <li class="">
             <a href="#tab-table7" data-toggle="tab" aria-expanded="true">Quality Management</a>
@@ -840,5 +869,5 @@
     </div>
 </div>
 
-</body>
-</html>
+<!-- </body>
+</html> -->

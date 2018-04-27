@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Gender Data Visual</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/gender_style.css">
 </head>
 <body>
+  {% include 'includes/_navbar.html' %}
     <h1>Employee Gender Distribution</h1>
     <hr>
     <div id="switch-button">
@@ -18,7 +20,7 @@
     <div id="gender_chart" style="position:relative;"></div>
 
     <script src="https://d3js.org/d3.v5.js"></script>
-    <script src="gender_app.js"></script>
+    <script src="static/gender_app.js"></script>
 
 </body>
 </html>
