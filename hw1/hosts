@@ -1,5 +1,5 @@
 [local]
-localhost ansible_ssh_user=ec2-user ansible_ssh_private_key_file=../172-alex.pem
+localhost ansible_ssh_user=ec2-user ansible_ssh_private_key_file=../../172-project-key.pem
 
 [webserver]
-52.35.185.121 ansible_ssh_user=ec2-user ansible_ssh_private_key_file=../172-alex.pem
+18.236.181.118 ansible_ssh_user=ec2-user ansible_ssh_private_key_file=../../172-project-key.pem

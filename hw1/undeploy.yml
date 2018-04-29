@@ -8,11 +8,11 @@
   
   tasks:
     - name: Terminate Flask webserver process
-      shell: "ps ax | grep -v grep | grep hw1/app.py | awk '{$1=$1};1' | cut -f1 -d ' ' | xargs sudo kill"
+      shell: "ps ax | grep -v grep | grep app.py | cut -f1 -d ' ' | xargs sudo kill"
 
     - name: Remove virtual environment
       file:
-        path: /home/ec2-user/Enterprise-Software/hw1/env
+        path: /home/ec2-user/Enterprise-Software/env
         state: absent
 
     - name: Uninstall virtualenv 

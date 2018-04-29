@@ -11,13 +11,13 @@
       yum: name=python-virtualenv state=present
 
     - name: Create virtual environment
-      shell: "virtualenv /home/ec2-user/Enterprise-Software/hw1/env"
+      shell: "virtualenv /home/ec2-user/Enterprise-Software/env"
 
     - name: Activate virtual environment
-      shell: "source /home/ec2-user/Enterprise-Software/hw1/env/bin/activate"
+      shell: "source /home/ec2-user/Enterprise-Software/env/bin/activate"
 
     - name: Install Flask
-      shell: "pip install flask"
+      shell: "pip install flask flask-sso"
 
     - name: Deploy Flask on port 80
-      shell: "python /home/ec2-user/Enterprise-Software/hw1/app.py"
+      shell: "nohup python /home/ec2-user/Enterprise-Software/project/app.py"
