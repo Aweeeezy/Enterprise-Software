@@ -15,6 +15,7 @@ SSO_ATTRIBUTE_MAP = {
 }
 
 app.config['SSO_ATTRIBUTE_MAP'] = SSO_ATTRIBUTE_MAP
+app.secret_key = 'a_super_secret_key'
 
 @app.route('/')
 def index():
@@ -42,4 +43,5 @@ def login():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)
+    #app.run(host='0.0.0.0', port=80)
+    app.run()
