@@ -41,6 +41,11 @@ def login():
     session['user'] = True
     return render_template('table.html')
 
+@app.route('/logout')
+def logout():
+    session.pop('user', None)
+    return render_template('index.html')
+
 
 if __name__ == '__main__':
     #app.run(host='0.0.0.0', port=80)
