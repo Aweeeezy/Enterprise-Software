@@ -21,7 +21,8 @@ app.secret_key = 'a_super_secret_key'
 def index():
     if 'user' in session:
         #return 'Welcome {name}'.format(name=session['user']['nickname'])
-        return render_template('table.html')
+        # return render_template('table.html')
+        return render_template('index.html')
     return render_template('index.html')
 
 @app.route('/table')
@@ -49,4 +50,4 @@ def logout():
 
 if __name__ == '__main__':
     #app.run(host='0.0.0.0', port=80)
-    app.run()
+    app.run(debug=True)
