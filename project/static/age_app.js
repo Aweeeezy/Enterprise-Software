@@ -36,20 +36,20 @@ svg.append('clipPath')
 
 var x_scale = d3.scaleLinear()
     .domain([d3.min(data, function(d){
-        return d[0] - 1;
+        return d[0] -2;
     }), d3.max(data, function(d){
-        return d[0] + 1 ;
+        return d[0] + 2;
     })])
     .range([padding, chart_width - padding * 2]);
 
 var y_scale = d3.scaleLinear()
     //.domain([6000, 30000])
     .domain([d3.min(data, function(d){
-        return d[1];
+        return d[1]-1000;
     }), d3.max(data, function(d){
-        return d[1];
+        return d[1]+1000;
     })])
-    .range([chart_height - padding, padding * 2]);
+    .range([chart_height - padding, padding ]);
 
 //create axis
 var x_axis = d3.axisBottom( x_scale );
@@ -126,10 +126,15 @@ d3.selectAll('.tick text').on('click', function(d){
         }
     }
     y_scale.domain([d, d3.max(data, function(d){
-        return d[1];
+        return d[1]+1000;
     })]);
 
-    y_scale.range([chart_height - padding, padding ]);
+
+    x_scale.domain([d3.min(data, function(d){
+        return d[0]-2;
+    }), d3.max(data, function(d){
+        return d[0]+2;
+    })]);
 
 
     svg.selectAll('circle')
@@ -137,7 +142,7 @@ d3.selectAll('.tick text').on('click', function(d){
         .transition()
         .duration(1000)
         .attr("cx", function(d) {
-            return x_scale(d[0]);
+            return x_scale( d[0] );
         })
         .attr("cy", function(d) {
             return y_scale( d[1] );
