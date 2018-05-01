@@ -6,6 +6,8 @@ import datetime
 def read_data(path):
     return json.load(open(path, 'r'))
 
+# Wheel chart for data visualization
+# Displays each subcategory as a new layer outside the wheel
 def sort_for_wheel_chart(data):
     department_mapping = {d['dept_no']: d['dept_name'] for d in data['departments']}
 
@@ -71,6 +73,7 @@ def sort_for_wheel_chart(data):
 
     return sorted_data
 
+# Gender chart
 def sort_for_gender_chart(data):
     new_data = {k: {'male': 0, 'female': 0} for k in data.keys()}
     for dept, roles in data.items():
@@ -83,6 +86,7 @@ def sort_for_gender_chart(data):
 
     return new_data
 
+# Sorting algorithm for age chart
 def sort_for_age_chart(data):
     new_data = {53: 0,
                 54: 0,
@@ -107,6 +111,7 @@ def sort_for_age_chart(data):
 
     return new_data
 
+# Sorting algorithm for salary graph
 def sort_for_salary_graph(data):
     new_data = {}
     now = datetime.datetime.now()
