@@ -37,6 +37,10 @@ def visualizations():
 def ageVisualizations():
     return render_template('age.html')
 
+@app.route('/salaryVisualizations')
+def salaryVisualizations(): 
+    return render_template('salary.html')
+
 @app.route('/login')
 def login():
     session['user'] = True

@@ -2,19 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Age Data Visual</title>
+    <title>Salary Data Visual</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <link rel="stylesheet" type="text/css" href="static/salary.css">
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
 <body>
   {% include 'includes/_navbar.html' %}
-    <h1>Employee Age Distribution</h1>
+    <h1>Employee Salary Distribution</h1>
     <hr>
-    <div id="age_chart"></div>
+    <div id="salary_chart"></div>
 
     <script src="https://d3js.org/d3.v5.js"></script>
-    <script src="static/age_app.js"></script>
+    <script src="static/salary.js"></script>
 
 </body>
-</html>
