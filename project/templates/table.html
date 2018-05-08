@@ -61,7 +61,7 @@
 
 
         var myT1 = $('#myTable1.table').DataTable( {
-            ajax:           '/static/table_data/Finance.txt', 
+            ajax:           '/static/table_data/Finance.txt',
             "processing": false,
 
             "columns": [
@@ -69,7 +69,7 @@
                 { "data": "last_name" },
                 { "data": "first_name" },
                 { "data": "gender" },
-                { "data": "hire_date" }, 
+                { "data": "hire_date" },
                 {
                     "data": null,
                     "defaultContent": "<button class='department_history_button'>Department History</button>" +
@@ -181,432 +181,432 @@
             alert( data['last_name'] + ", " + data['first_name'] +"'s salary history is: \n"+ historyTable );
         } );
 
-        // var myT3 = $('#myTable3.table').DataTable( {
-        //     ajax:           '/static/table_data/Customer_Service.txt',
-        //     "processing": false,
-        //     "columns": [
-        //         { "data": "emp_no" },
-        //         { "data": "last_name" },
-        //         { "data": "first_name" },
-        //         { "data": "gender" },
-        //         { "data": "hire_date" },
-        //         {
-        //             "data": null,
-        //             "defaultContent": "<button class='department_history_button'>Department History</button>" +
-        //             "<button class='title_history_button'>Title History</button>" +
-        //             "<button class='salary_history_button'>Salary History</button>"
-        //         }
-        //     ],
-        //     // scrollY:        200,
-        //     //"deferLoading": 100,
-        //     scrollCollapse: true,
-        //     paging:         true
-        // } );
-        //
-        // $('#myTable3 tbody').on( 'click', '.department_history_button', function () {
-        //     var data = myT3.row( $(this).parents('tr') ).data();
-        //     var history = data['departments'];
-        //     var historyTable = "\n";
-        //     for (var i =0; i < history.length; i++){
-        //         for (var k in history[i]){
-        //             historyTable += k + ": " + history[i][k] + "\n";
-        //         }
-        //         historyTable += "\n"
-        //     }
-        //     alert( data['last_name'] + ", " + data['first_name'] +"'s department history is: \n"+ historyTable );
-        // } );
-        //
-        // $('#myTable3 tbody').on( 'click', '.title_history_button', function () {
-        //     var data = myT3.row( $(this).parents('tr') ).data();
-        //     var history = data['titles'];
-        //     var historyTable = "\n";
-        //     for (var i =0; i < history.length; i++){
-        //         for (var k in history[i]){
-        //             historyTable += k + ": " + history[i][k] + "\n";
-        //         }
-        //         historyTable += "\n"
-        //     }
-        //     alert( data['last_name'] + ", " + data['first_name'] +"'s title history is: \n"+ historyTable );
-        // } );
-        //
-        // $('#myTable3 tbody').on( 'click', '.salary_history_button', function () {
-        //     var data = myT3.row( $(this).parents('tr') ).data();
-        //     var history = data['salaries'];
-        //     var historyTable = "\n";
-        //     for (var i =0; i < history.length; i++){
-        //         for (var k in history[i]){
-        //             historyTable += k + ": " + history[i][k] + "\n";
-        //         }
-        //         historyTable += "\n"
-        //     }
-        //     alert( data['last_name'] + ", " + data['first_name'] +"'s salary history is: \n"+ historyTable );
-        // } );
-        //
-        // var myT4 = $('#myTable4.table').DataTable( {
-        //     ajax:           '/static/table_data/Development.txt',
-        //     "processing": false,
-        //     "columns": [
-        //         { "data": "emp_no" },
-        //         { "data": "last_name" },
-        //         { "data": "first_name" },
-        //         { "data": "gender" },
-        //         { "data": "hire_date" },
-        //         {
-        //             "data": null,
-        //             "defaultContent": "<button class='department_history_button'>Department History</button>" +
-        //             "<button class='title_history_button'>Title History</button>" +
-        //             "<button class='salary_history_button'>Salary History</button>"
-        //         }
-        //     ],
-        //     // scrollY:        200,
-        //     //"deferLoading": 100,
-        //     scrollCollapse: true,
-        //     paging:         true
-        // } );
-        //
-        // $('#myTable4 tbody').on( 'click', '.department_history_button', function () {
-        //     var data = myT4.row( $(this).parents('tr') ).data();
-        //     var history = data['departments'];
-        //     var historyTable = "\n";
-        //     for (var i =0; i < history.length; i++){
-        //         for (var k in history[i]){
-        //             historyTable += k + ": " + history[i][k] + "\n";
-        //         }
-        //         historyTable += "\n"
-        //     }
-        //     alert( data['last_name'] + ", " + data['first_name'] +"'s department history is: \n"+ historyTable );
-        // } );
-        //
-        // $('#myTable4 tbody').on( 'click', '.title_history_button', function () {
-        //     var data = myT4.row( $(this).parents('tr') ).data();
-        //     var history = data['titles'];
-        //     var historyTable = "\n";
-        //     for (var i =0; i < history.length; i++){
-        //         for (var k in history[i]){
-        //             historyTable += k + ": " + history[i][k] + "\n";
-        //         }
-        //         historyTable += "\n"
-        //     }
-        //     alert( data['last_name'] + ", " + data['first_name'] +"'s title history is: \n"+ historyTable );
-        // } );
-        //
-        // $('#myTable4 tbody').on( 'click', '.salary_history_button', function () {
-        //     var data = myT4.row( $(this).parents('tr') ).data();
-        //     var history = data['salaries'];
-        //     var historyTable = "\n";
-        //     for (var i =0; i < history.length; i++){
-        //         for (var k in history[i]){
-        //             historyTable += k + ": " + history[i][k] + "\n";
-        //         }
-        //         historyTable += "\n"
-        //     }
-        //     alert( data['last_name'] + ", " + data['first_name'] +"'s salary history is: \n"+ historyTable );
-        // } );
-        //
-        // var myT5 = $('#myTable5.table').DataTable( {
-        //     ajax:           '/static/table_data/Marketing.txt',
-        //     "processing": false,
-        //     "columns": [
-        //         { "data": "emp_no" },
-        //         { "data": "last_name" },
-        //         { "data": "first_name" },
-        //         { "data": "gender" },
-        //         { "data": "hire_date" },
-        //         {
-        //             "data": null,
-        //             "defaultContent": "<button class='department_history_button'>Department History</button>" +
-        //             "<button class='title_history_button'>Title History</button>" +
-        //             "<button class='salary_history_button'>Salary History</button>"
-        //         }
-        //     ],
-        //     // scrollY:        200,
-        //     //"deferLoading": 100,
-        //     scrollCollapse: true,
-        //     paging:         true
-        // } );
-        //
-        // $('#myTable5 tbody').on( 'click', '.department_history_button', function () {
-        //     var data = myT5.row( $(this).parents('tr') ).data();
-        //     var history = data['departments'];
-        //     var historyTable = "\n";
-        //     for (var i =0; i < history.length; i++){
-        //         for (var k in history[i]){
-        //             historyTable += k + ": " + history[i][k] + "\n";
-        //         }
-        //         historyTable += "\n"
-        //     }
-        //     alert( data['last_name'] + ", " + data['first_name'] +"'s department history is: \n"+ historyTable );
-        // } );
-        //
-        // $('#myTable5 tbody').on( 'click', '.title_history_button', function () {
-        //     var data = myT5.row( $(this).parents('tr') ).data();
-        //     var history = data['titles'];
-        //     var historyTable = "\n";
-        //     for (var i =0; i < history.length; i++){
-        //         for (var k in history[i]){
-        //             historyTable += k + ": " + history[i][k] + "\n";
-        //         }
-        //         historyTable += "\n"
-        //     }
-        //     alert( data['last_name'] + ", " + data['first_name'] +"'s title history is: \n"+ historyTable );
-        // } );
-        //
-        // $('#myTable5 tbody').on( 'click', '.salary_history_button', function () {
-        //     var data = myT5.row( $(this).parents('tr') ).data();
-        //     var history = data['salaries'];
-        //     var historyTable = "\n";
-        //     for (var i =0; i < history.length; i++){
-        //         for (var k in history[i]){
-        //             historyTable += k + ": " + history[i][k] + "\n";
-        //         }
-        //         historyTable += "\n"
-        //     }
-        //     alert( data['last_name'] + ", " + data['first_name'] +"'s salary history is: \n"+ historyTable );
-        // } );
-        //
-        // var myT6 = $('#myTable6.table').DataTable( {
-        //     ajax:           '/static/table_data/Production.txt',
-        //     "processing": false,
-        //     "columns": [
-        //         { "data": "emp_no" },
-        //         { "data": "last_name" },
-        //         { "data": "first_name" },
-        //         { "data": "gender" },
-        //         { "data": "hire_date" },
-        //         {
-        //             "data": null,
-        //             "defaultContent": "<button class='department_history_button'>Department History</button>" +
-        //             "<button class='title_history_button'>Title History</button>" +
-        //             "<button class='salary_history_button'>Salary History</button>"
-        //         }
-        //     ],
-        //     // scrollY:        200,
-        //     //"deferLoading": 100,
-        //     scrollCollapse: true,
-        //     paging:         true
-        // } );
-        //
-        // $('#myTable6 tbody').on( 'click', '.department_history_button', function () {
-        //     var data = myT6.row( $(this).parents('tr') ).data();
-        //     var history = data['departments'];
-        //     var historyTable = "\n";
-        //     for (var i =0; i < history.length; i++){
-        //         for (var k in history[i]){
-        //             historyTable += k + ": " + history[i][k] + "\n";
-        //         }
-        //         historyTable += "\n"
-        //     }
-        //     alert( data['last_name'] + ", " + data['first_name'] +"'s department history is: \n"+ historyTable );
-        // } );
-        //
-        // $('#myTable6 tbody').on( 'click', '.title_history_button', function () {
-        //     var data = myT6.row( $(this).parents('tr') ).data();
-        //     var history = data['titles'];
-        //     var historyTable = "\n";
-        //     for (var i =0; i < history.length; i++){
-        //         for (var k in history[i]){
-        //             historyTable += k + ": " + history[i][k] + "\n";
-        //         }
-        //         historyTable += "\n"
-        //     }
-        //     alert( data['last_name'] + ", " + data['first_name'] +"'s title history is: \n"+ historyTable );
-        // } );
-        //
-        // $('#myTable6 tbody').on( 'click', '.salary_history_button', function () {
-        //     var data = myT6.row( $(this).parents('tr') ).data();
-        //     var history = data['salaries'];
-        //     var historyTable = "\n";
-        //     for (var i =0; i < history.length; i++){
-        //         for (var k in history[i]){
-        //             historyTable += k + ": " + history[i][k] + "\n";
-        //         }
-        //         historyTable += "\n"
-        //     }
-        //     alert( data['last_name'] + ", " + data['first_name'] +"'s salary history is: \n"+ historyTable );
-        // } );
-        //
-        // var myT7 = $('#myTable7.table').DataTable( {
-        //     ajax:           '/static/table_data/Quality_Management.txt',
-        //     "processing": false,
-        //     "columns": [
-        //         { "data": "emp_no" },
-        //         { "data": "last_name" },
-        //         { "data": "first_name" },
-        //         { "data": "gender" },
-        //         { "data": "hire_date" },
-        //         {
-        //             "data": null,
-        //             "defaultContent": "<button class='department_history_button'>Department History</button>" +
-        //             "<button class='title_history_button'>Title History</button>" +
-        //             "<button class='salary_history_button'>Salary History</button>"
-        //         }
-        //     ],
-        //     // scrollY:        200,
-        //     //"deferLoading": 100,
-        //     scrollCollapse: true,
-        //     paging:         true
-        // } );
-        //
-        // $('#myTable7 tbody').on( 'click', '.department_history_button', function () {
-        //     var data = myT7.row( $(this).parents('tr') ).data();
-        //     var history = data['departments'];
-        //     var historyTable = "\n";
-        //     for (var i =0; i < history.length; i++){
-        //         for (var k in history[i]){
-        //             historyTable += k + ": " + history[i][k] + "\n";
-        //         }
-        //         historyTable += "\n"
-        //     }
-        //     alert( data['last_name'] + ", " + data['first_name'] +"'s department history is: \n"+ historyTable );
-        // } );
-        //
-        // $('#myTable7 tbody').on( 'click', '.title_history_button', function () {
-        //     var data = myT7.row( $(this).parents('tr') ).data();
-        //     var history = data['titles'];
-        //     var historyTable = "\n";
-        //     for (var i =0; i < history.length; i++){
-        //         for (var k in history[i]){
-        //             historyTable += k + ": " + history[i][k] + "\n";
-        //         }
-        //         historyTable += "\n"
-        //     }
-        //     alert( data['last_name'] + ", " + data['first_name'] +"'s title history is: \n"+ historyTable );
-        // } );
-        //
-        // $('#myTable7 tbody').on( 'click', '.salary_history_button', function () {
-        //     var data = myT7.row( $(this).parents('tr') ).data();
-        //     var history = data['salaries'];
-        //     var historyTable = "\n";
-        //     for (var i =0; i < history.length; i++){
-        //         for (var k in history[i]){
-        //             historyTable += k + ": " + history[i][k] + "\n";
-        //         }
-        //         historyTable += "\n"
-        //     }
-        //     alert( data['last_name'] + ", " + data['first_name'] +"'s salary history is: \n"+ historyTable );
-        // } );
-        //
-        // var myT8 = $('#myTable8.table').DataTable( {
-        //     ajax:           '/static/table_data/Research.txt',
-        //     "processing": false,
-        //     "columns": [
-        //         { "data": "emp_no" },
-        //         { "data": "last_name" },
-        //         { "data": "first_name" },
-        //         { "data": "gender" },
-        //         { "data": "hire_date" },
-        //         {
-        //             "data": null,
-        //             "defaultContent": "<button class='department_history_button'>Department History</button>" +
-        //             "<button class='title_history_button'>Title History</button>" +
-        //             "<button class='salary_history_button'>Salary History</button>"
-        //         }
-        //     ],
-        //     // scrollY:        200,
-        //     //"deferLoading": 100,
-        //     scrollCollapse: true,
-        //     paging:         true
-        // } );
-        //
-        // $('#myTable8 tbody').on( 'click', '.department_history_button', function () {
-        //     var data = myT8.row( $(this).parents('tr') ).data();
-        //     var history = data['departments'];
-        //     var historyTable = "\n";
-        //     for (var i =0; i < history.length; i++){
-        //         for (var k in history[i]){
-        //             historyTable += k + ": " + history[i][k] + "\n";
-        //         }
-        //         historyTable += "\n"
-        //     }
-        //     alert( data['last_name'] + ", " + data['first_name'] +"'s department history is: \n"+ historyTable );
-        // } );
-        //
-        // $('#myTable8 tbody').on( 'click', '.title_history_button', function () {
-        //     var data = myT8.row( $(this).parents('tr') ).data();
-        //     var history = data['titles'];
-        //     var historyTable = "\n";
-        //     for (var i =0; i < history.length; i++){
-        //         for (var k in history[i]){
-        //             historyTable += k + ": " + history[i][k] + "\n";
-        //         }
-        //         historyTable += "\n"
-        //     }
-        //     alert( data['last_name'] + ", " + data['first_name'] +"'s title history is: \n"+ historyTable );
-        // } );
-        //
-        // $('#myTable8 tbody').on( 'click', '.salary_history_button', function () {
-        //     var data = myT8.row( $(this).parents('tr') ).data();
-        //     var history = data['salaries'];
-        //     var historyTable = "\n";
-        //     for (var i =0; i < history.length; i++){
-        //         for (var k in history[i]){
-        //             historyTable += k + ": " + history[i][k] + "\n";
-        //         }
-        //         historyTable += "\n"
-        //     }
-        //     alert( data['last_name'] + ", " + data['first_name'] +"'s salary history is: \n"+ historyTable );
-        // } );
-        //
-        // var myT9 = $('#myTable9.table').DataTable( {
-        //     ajax:           '/static/table_data/Sales.txt',
-        //     "processing": false,
-        //     "columns": [
-        //         { "data": "emp_no" },
-        //         { "data": "last_name" },
-        //         { "data": "first_name" },
-        //         { "data": "gender" },
-        //         { "data": "hire_date" },
-        //         {
-        //             "data": null,
-        //             "defaultContent": "<button class='department_history_button'>Department History</button>" +
-        //             "<button class='title_history_button'>Title History</button>" +
-        //             "<button class='salary_history_button'>Salary History</button>"
-        //         }
-        //     ],
-        //     // scrollY:        200,
-        //     //"deferLoading": 100,
-        //     scrollCollapse: true,
-        //     paging:         true
-        // } );
-        //
-        // $('#myTable9 tbody').on( 'click', '.department_history_button', function () {
-        //     var data = myT9.row( $(this).parents('tr') ).data();
-        //     var history = data['departments'];
-        //     var historyTable = "\n";
-        //     for (var i =0; i < history.length; i++){
-        //         for (var k in history[i]){
-        //             historyTable += k + ": " + history[i][k] + "\n";
-        //         }
-        //         historyTable += "\n"
-        //     }
-        //     alert( data['last_name'] + ", " + data['first_name'] +"'s department history is: \n"+ historyTable );
-        // } );
-        //
-        // $('#myTable9 tbody').on( 'click', '.title_history_button', function () {
-        //     var data = myT9.row( $(this).parents('tr') ).data();
-        //     var history = data['titles'];
-        //     var historyTable = "\n";
-        //     for (var i =0; i < history.length; i++){
-        //         for (var k in history[i]){
-        //             historyTable += k + ": " + history[i][k] + "\n";
-        //         }
-        //         historyTable += "\n"
-        //     }
-        //     alert( data['last_name'] + ", " + data['first_name'] +"'s title history is: \n"+ historyTable );
-        // } );
-        //
-        // $('#myTable9 tbody').on( 'click', '.salary_history_button', function () {
-        //     var data = myT9.row( $(this).parents('tr') ).data();
-        //     var history = data['salaries'];
-        //     var historyTable = "\n";
-        //     for (var i =0; i < history.length; i++){
-        //         for (var k in history[i]){
-        //             historyTable += k + ": " + history[i][k] + "\n";
-        //         }
-        //         historyTable += "\n"
-        //     }
-        //     alert( data['last_name'] + ", " + data['first_name'] +"'s salary history is: \n"+ historyTable );
-        // } );
+        var myT3 = $('#myTable3.table').DataTable( {
+            ajax:           '/static/table_data/Customer_Service.txt',
+            "processing": false,
+            "columns": [
+                { "data": "emp_no" },
+                { "data": "last_name" },
+                { "data": "first_name" },
+                { "data": "gender" },
+                { "data": "hire_date" },
+                {
+                    "data": null,
+                    "defaultContent": "<button class='department_history_button'>Department History</button>" +
+                    "<button class='title_history_button'>Title History</button>" +
+                    "<button class='salary_history_button'>Salary History</button>"
+                }
+            ],
+            // scrollY:        200,
+            //"deferLoading": 100,
+            scrollCollapse: true,
+            paging:         true
+        } );
+
+        $('#myTable3 tbody').on( 'click', '.department_history_button', function () {
+            var data = myT3.row( $(this).parents('tr') ).data();
+            var history = data['departments'];
+            var historyTable = "\n";
+            for (var i =0; i < history.length; i++){
+                for (var k in history[i]){
+                    historyTable += k + ": " + history[i][k] + "\n";
+                }
+                historyTable += "\n"
+            }
+            alert( data['last_name'] + ", " + data['first_name'] +"'s department history is: \n"+ historyTable );
+        } );
+
+        $('#myTable3 tbody').on( 'click', '.title_history_button', function () {
+            var data = myT3.row( $(this).parents('tr') ).data();
+            var history = data['titles'];
+            var historyTable = "\n";
+            for (var i =0; i < history.length; i++){
+                for (var k in history[i]){
+                    historyTable += k + ": " + history[i][k] + "\n";
+                }
+                historyTable += "\n"
+            }
+            alert( data['last_name'] + ", " + data['first_name'] +"'s title history is: \n"+ historyTable );
+        } );
+
+        $('#myTable3 tbody').on( 'click', '.salary_history_button', function () {
+            var data = myT3.row( $(this).parents('tr') ).data();
+            var history = data['salaries'];
+            var historyTable = "\n";
+            for (var i =0; i < history.length; i++){
+                for (var k in history[i]){
+                    historyTable += k + ": " + history[i][k] + "\n";
+                }
+                historyTable += "\n"
+            }
+            alert( data['last_name'] + ", " + data['first_name'] +"'s salary history is: \n"+ historyTable );
+        } );
+
+        var myT4 = $('#myTable4.table').DataTable( {
+            ajax:           '/static/table_data/Development.txt',
+            "processing": false,
+            "columns": [
+                { "data": "emp_no" },
+                { "data": "last_name" },
+                { "data": "first_name" },
+                { "data": "gender" },
+                { "data": "hire_date" },
+                {
+                    "data": null,
+                    "defaultContent": "<button class='department_history_button'>Department History</button>" +
+                    "<button class='title_history_button'>Title History</button>" +
+                    "<button class='salary_history_button'>Salary History</button>"
+                }
+            ],
+            // scrollY:        200,
+            //"deferLoading": 100,
+            scrollCollapse: true,
+            paging:         true
+        } );
+
+        $('#myTable4 tbody').on( 'click', '.department_history_button', function () {
+            var data = myT4.row( $(this).parents('tr') ).data();
+            var history = data['departments'];
+            var historyTable = "\n";
+            for (var i =0; i < history.length; i++){
+                for (var k in history[i]){
+                    historyTable += k + ": " + history[i][k] + "\n";
+                }
+                historyTable += "\n"
+            }
+            alert( data['last_name'] + ", " + data['first_name'] +"'s department history is: \n"+ historyTable );
+        } );
+
+        $('#myTable4 tbody').on( 'click', '.title_history_button', function () {
+            var data = myT4.row( $(this).parents('tr') ).data();
+            var history = data['titles'];
+            var historyTable = "\n";
+            for (var i =0; i < history.length; i++){
+                for (var k in history[i]){
+                    historyTable += k + ": " + history[i][k] + "\n";
+                }
+                historyTable += "\n"
+            }
+            alert( data['last_name'] + ", " + data['first_name'] +"'s title history is: \n"+ historyTable );
+        } );
+
+        $('#myTable4 tbody').on( 'click', '.salary_history_button', function () {
+            var data = myT4.row( $(this).parents('tr') ).data();
+            var history = data['salaries'];
+            var historyTable = "\n";
+            for (var i =0; i < history.length; i++){
+                for (var k in history[i]){
+                    historyTable += k + ": " + history[i][k] + "\n";
+                }
+                historyTable += "\n"
+            }
+            alert( data['last_name'] + ", " + data['first_name'] +"'s salary history is: \n"+ historyTable );
+        } );
+
+        var myT5 = $('#myTable5.table').DataTable( {
+            ajax:           '/static/table_data/Marketing.txt',
+            "processing": false,
+            "columns": [
+                { "data": "emp_no" },
+                { "data": "last_name" },
+                { "data": "first_name" },
+                { "data": "gender" },
+                { "data": "hire_date" },
+                {
+                    "data": null,
+                    "defaultContent": "<button class='department_history_button'>Department History</button>" +
+                    "<button class='title_history_button'>Title History</button>" +
+                    "<button class='salary_history_button'>Salary History</button>"
+                }
+            ],
+            // scrollY:        200,
+            //"deferLoading": 100,
+            scrollCollapse: true,
+            paging:         true
+        } );
+
+        $('#myTable5 tbody').on( 'click', '.department_history_button', function () {
+            var data = myT5.row( $(this).parents('tr') ).data();
+            var history = data['departments'];
+            var historyTable = "\n";
+            for (var i =0; i < history.length; i++){
+                for (var k in history[i]){
+                    historyTable += k + ": " + history[i][k] + "\n";
+                }
+                historyTable += "\n"
+            }
+            alert( data['last_name'] + ", " + data['first_name'] +"'s department history is: \n"+ historyTable );
+        } );
+
+        $('#myTable5 tbody').on( 'click', '.title_history_button', function () {
+            var data = myT5.row( $(this).parents('tr') ).data();
+            var history = data['titles'];
+            var historyTable = "\n";
+            for (var i =0; i < history.length; i++){
+                for (var k in history[i]){
+                    historyTable += k + ": " + history[i][k] + "\n";
+                }
+                historyTable += "\n"
+            }
+            alert( data['last_name'] + ", " + data['first_name'] +"'s title history is: \n"+ historyTable );
+        } );
+
+        $('#myTable5 tbody').on( 'click', '.salary_history_button', function () {
+            var data = myT5.row( $(this).parents('tr') ).data();
+            var history = data['salaries'];
+            var historyTable = "\n";
+            for (var i =0; i < history.length; i++){
+                for (var k in history[i]){
+                    historyTable += k + ": " + history[i][k] + "\n";
+                }
+                historyTable += "\n"
+            }
+            alert( data['last_name'] + ", " + data['first_name'] +"'s salary history is: \n"+ historyTable );
+        } );
+
+        var myT6 = $('#myTable6.table').DataTable( {
+            ajax:           '/static/table_data/Production.txt',
+            "processing": false,
+            "columns": [
+                { "data": "emp_no" },
+                { "data": "last_name" },
+                { "data": "first_name" },
+                { "data": "gender" },
+                { "data": "hire_date" },
+                {
+                    "data": null,
+                    "defaultContent": "<button class='department_history_button'>Department History</button>" +
+                    "<button class='title_history_button'>Title History</button>" +
+                    "<button class='salary_history_button'>Salary History</button>"
+                }
+            ],
+            // scrollY:        200,
+            //"deferLoading": 100,
+            scrollCollapse: true,
+            paging:         true
+        } );
+
+        $('#myTable6 tbody').on( 'click', '.department_history_button', function () {
+            var data = myT6.row( $(this).parents('tr') ).data();
+            var history = data['departments'];
+            var historyTable = "\n";
+            for (var i =0; i < history.length; i++){
+                for (var k in history[i]){
+                    historyTable += k + ": " + history[i][k] + "\n";
+                }
+                historyTable += "\n"
+            }
+            alert( data['last_name'] + ", " + data['first_name'] +"'s department history is: \n"+ historyTable );
+        } );
+
+        $('#myTable6 tbody').on( 'click', '.title_history_button', function () {
+            var data = myT6.row( $(this).parents('tr') ).data();
+            var history = data['titles'];
+            var historyTable = "\n";
+            for (var i =0; i < history.length; i++){
+                for (var k in history[i]){
+                    historyTable += k + ": " + history[i][k] + "\n";
+                }
+                historyTable += "\n"
+            }
+            alert( data['last_name'] + ", " + data['first_name'] +"'s title history is: \n"+ historyTable );
+        } );
+
+        $('#myTable6 tbody').on( 'click', '.salary_history_button', function () {
+            var data = myT6.row( $(this).parents('tr') ).data();
+            var history = data['salaries'];
+            var historyTable = "\n";
+            for (var i =0; i < history.length; i++){
+                for (var k in history[i]){
+                    historyTable += k + ": " + history[i][k] + "\n";
+                }
+                historyTable += "\n"
+            }
+            alert( data['last_name'] + ", " + data['first_name'] +"'s salary history is: \n"+ historyTable );
+        } );
+
+        var myT7 = $('#myTable7.table').DataTable( {
+            ajax:           '/static/table_data/Quality_Management.txt',
+            "processing": false,
+            "columns": [
+                { "data": "emp_no" },
+                { "data": "last_name" },
+                { "data": "first_name" },
+                { "data": "gender" },
+                { "data": "hire_date" },
+                {
+                    "data": null,
+                    "defaultContent": "<button class='department_history_button'>Department History</button>" +
+                    "<button class='title_history_button'>Title History</button>" +
+                    "<button class='salary_history_button'>Salary History</button>"
+                }
+            ],
+            // scrollY:        200,
+            //"deferLoading": 100,
+            scrollCollapse: true,
+            paging:         true
+        } );
+
+        $('#myTable7 tbody').on( 'click', '.department_history_button', function () {
+            var data = myT7.row( $(this).parents('tr') ).data();
+            var history = data['departments'];
+            var historyTable = "\n";
+            for (var i =0; i < history.length; i++){
+                for (var k in history[i]){
+                    historyTable += k + ": " + history[i][k] + "\n";
+                }
+                historyTable += "\n"
+            }
+            alert( data['last_name'] + ", " + data['first_name'] +"'s department history is: \n"+ historyTable );
+        } );
+
+        $('#myTable7 tbody').on( 'click', '.title_history_button', function () {
+            var data = myT7.row( $(this).parents('tr') ).data();
+            var history = data['titles'];
+            var historyTable = "\n";
+            for (var i =0; i < history.length; i++){
+                for (var k in history[i]){
+                    historyTable += k + ": " + history[i][k] + "\n";
+                }
+                historyTable += "\n"
+            }
+            alert( data['last_name'] + ", " + data['first_name'] +"'s title history is: \n"+ historyTable );
+        } );
+
+        $('#myTable7 tbody').on( 'click', '.salary_history_button', function () {
+            var data = myT7.row( $(this).parents('tr') ).data();
+            var history = data['salaries'];
+            var historyTable = "\n";
+            for (var i =0; i < history.length; i++){
+                for (var k in history[i]){
+                    historyTable += k + ": " + history[i][k] + "\n";
+                }
+                historyTable += "\n"
+            }
+            alert( data['last_name'] + ", " + data['first_name'] +"'s salary history is: \n"+ historyTable );
+        } );
+
+        var myT8 = $('#myTable8.table').DataTable( {
+            ajax:           '/static/table_data/Research.txt',
+            "processing": false,
+            "columns": [
+                { "data": "emp_no" },
+                { "data": "last_name" },
+                { "data": "first_name" },
+                { "data": "gender" },
+                { "data": "hire_date" },
+                {
+                    "data": null,
+                    "defaultContent": "<button class='department_history_button'>Department History</button>" +
+                    "<button class='title_history_button'>Title History</button>" +
+                    "<button class='salary_history_button'>Salary History</button>"
+                }
+            ],
+            // scrollY:        200,
+            //"deferLoading": 100,
+            scrollCollapse: true,
+            paging:         true
+        } );
+
+        $('#myTable8 tbody').on( 'click', '.department_history_button', function () {
+            var data = myT8.row( $(this).parents('tr') ).data();
+            var history = data['departments'];
+            var historyTable = "\n";
+            for (var i =0; i < history.length; i++){
+                for (var k in history[i]){
+                    historyTable += k + ": " + history[i][k] + "\n";
+                }
+                historyTable += "\n"
+            }
+            alert( data['last_name'] + ", " + data['first_name'] +"'s department history is: \n"+ historyTable );
+        } );
+
+        $('#myTable8 tbody').on( 'click', '.title_history_button', function () {
+            var data = myT8.row( $(this).parents('tr') ).data();
+            var history = data['titles'];
+            var historyTable = "\n";
+            for (var i =0; i < history.length; i++){
+                for (var k in history[i]){
+                    historyTable += k + ": " + history[i][k] + "\n";
+                }
+                historyTable += "\n"
+            }
+            alert( data['last_name'] + ", " + data['first_name'] +"'s title history is: \n"+ historyTable );
+        } );
+
+        $('#myTable8 tbody').on( 'click', '.salary_history_button', function () {
+            var data = myT8.row( $(this).parents('tr') ).data();
+            var history = data['salaries'];
+            var historyTable = "\n";
+            for (var i =0; i < history.length; i++){
+                for (var k in history[i]){
+                    historyTable += k + ": " + history[i][k] + "\n";
+                }
+                historyTable += "\n"
+            }
+            alert( data['last_name'] + ", " + data['first_name'] +"'s salary history is: \n"+ historyTable );
+        } );
+
+        var myT9 = $('#myTable9.table').DataTable( {
+            ajax:           '/static/table_data/Sales.txt',
+            "processing": false,
+            "columns": [
+                { "data": "emp_no" },
+                { "data": "last_name" },
+                { "data": "first_name" },
+                { "data": "gender" },
+                { "data": "hire_date" },
+                {
+                    "data": null,
+                    "defaultContent": "<button class='department_history_button'>Department History</button>" +
+                    "<button class='title_history_button'>Title History</button>" +
+                    "<button class='salary_history_button'>Salary History</button>"
+                }
+            ],
+            // scrollY:        200,
+            //"deferLoading": 100,
+            scrollCollapse: true,
+            paging:         true
+        } );
+
+        $('#myTable9 tbody').on( 'click', '.department_history_button', function () {
+            var data = myT9.row( $(this).parents('tr') ).data();
+            var history = data['departments'];
+            var historyTable = "\n";
+            for (var i =0; i < history.length; i++){
+                for (var k in history[i]){
+                    historyTable += k + ": " + history[i][k] + "\n";
+                }
+                historyTable += "\n"
+            }
+            alert( data['last_name'] + ", " + data['first_name'] +"'s department history is: \n"+ historyTable );
+        } );
+
+        $('#myTable9 tbody').on( 'click', '.title_history_button', function () {
+            var data = myT9.row( $(this).parents('tr') ).data();
+            var history = data['titles'];
+            var historyTable = "\n";
+            for (var i =0; i < history.length; i++){
+                for (var k in history[i]){
+                    historyTable += k + ": " + history[i][k] + "\n";
+                }
+                historyTable += "\n"
+            }
+            alert( data['last_name'] + ", " + data['first_name'] +"'s title history is: \n"+ historyTable );
+        } );
+
+        $('#myTable9 tbody').on( 'click', '.salary_history_button', function () {
+            var data = myT9.row( $(this).parents('tr') ).data();
+            var history = data['salaries'];
+            var historyTable = "\n";
+            for (var i =0; i < history.length; i++){
+                for (var k in history[i]){
+                    historyTable += k + ": " + history[i][k] + "\n";
+                }
+                historyTable += "\n"
+            }
+            alert( data['last_name'] + ", " + data['first_name'] +"'s salary history is: \n"+ historyTable );
+        } );
 
         //Apply a search to the second table for the demo
         //$('#myTable1').DataTable().search( 'New York' ).draw();
